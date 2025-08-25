@@ -1,16 +1,9 @@
 {
   "version": 2,
-  "name": "ady-dashboard",
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
     }
   ],
   "env": {
@@ -22,11 +15,6 @@
     "NEXT_PUBLIC_LOG_LEVEL": "info",
     "NEXT_PUBLIC_MAX_FILE_SIZE": "10485760",
     "NEXT_PUBLIC_ALLOWED_FILE_TYPES": "csv,json,xlsx,xls"
-  },
-  "functions": {
-    "src/app/api/**/*.ts": {
-      "maxDuration": 30
-    }
   },
   "headers": [
     {
